@@ -41,9 +41,9 @@
    python stars.py
    ```
 
-运行成功后，你将在项目里下看到一个名为 `starred_projects.md` 的 Markdown 文件
+运行成功后，你将在项目里下看到一个名为 `用户名_starred_projects.md` 的 Markdown 文件
 
-其中包含了你所选用户的所有 Stars 过的仓库列表
+其中包含了你所要获取用户的所有 Stars 过的仓库列表
 
 
 
