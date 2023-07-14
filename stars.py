@@ -9,7 +9,6 @@ try:
     response = requests.get(url, auth=(username, token))
 
     if response.status_code == 200:
-        
         # 获取第一页的收藏项目信息
         projects = response.json()
         all_projects = projects
@@ -36,11 +35,11 @@ try:
 
         # 创建Markdown文件并倒序写入项目信息
         filename = f"{username}_starred_projects.md"
-        with open(filename, "w") as file:
+        with open(filename, "w", encoding="utf-8") as file:
             file.write(f"# {username} Starred Projects\n\n")
             for project in reversed(all_projects):
                 # file.write(f"- [{project['name']}]({project['html_url']})\n")
-                file.write(f"# {project['name']}\n\n")
+                file.write(f"## {project['name']}\n\n")
                 file.write(f"**项目链接:**{project['html_url']}\n\n")
                 file.write(f"**项目全名:**{project['full_name']}\n\n")   
                 file.write(f"**项目简介:**{project['description']}\n\n")
